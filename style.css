@@ -101,11 +101,12 @@ body {
 
 #share-bar {
   position: absolute;
-  bottom: 30%;
+  bottom: 45%;
   right: 15%;
 }
 
 .active-share {
+  position: relative;
   background-color: hsl(217, 19%, 35%);
   color: white;
   display: flex;
@@ -114,6 +115,18 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.active-share::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 20px 20px 20px;
+  border-color: transparent transparent transparent hsl(217, 19%, 35%);
 }
 
 .active-share p {
